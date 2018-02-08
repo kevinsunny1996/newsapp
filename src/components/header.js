@@ -12,7 +12,7 @@ class Header extends Component{
     super(props);
     this.state={
       keywords:'',
-      color:'#03a9f4'
+      color:'#03a9f4',
     }
   }
   /*this.countryData = [
@@ -33,7 +33,7 @@ class Header extends Component{
   }
 
   handleChange(event){
-    this.setState({color:event.target.value})
+    this.setState({color:event.target.value});
   }
 
   render(){
@@ -49,7 +49,7 @@ class Header extends Component{
         onCLick={()=>console.log('clicked')}
         >Logo</div>
         <input onChange={this.inputChange.bind(this)}/>
-        <select name="color" value={this.state.color} onChange={this.handleChange.bind(this)}>{this.colorSelect.map((e,key) =>{
+        <select name="color" value={this.state.color} onClick={this.handleChange.bind(this)}>{this.colorSelect.map((e,key) =>{
             return <option key={key} value={e.value}>{e.name}</option>;
           })}
         </select>
